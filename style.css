@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  color: white;
+  background: radial-gradient(circle at top, #0f2027, #000);
+  overflow-x: hidden;
+}
+
+/* BACKGROUND GLOW */
+.bg-glow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,255,255,0.15), transparent),
+    radial-gradient(circle at 80% 80%, rgba(255,0,255,0.15), transparent);
+  animation: glow 6s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes glow {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+header h1 {
+  font-size: 40px;
+  text-shadow: 0 0 20px cyan;
+}
+
+header p {
+  color: #aaa;
+}
+
+/* GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* PRODUCT CARD */
+.product {
+  background: rgba(0,0,0,0.7);
+  border-radius: 18px;
+  padding: 18px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(0,255,255,0.6);
+}
+
+/* IMAGE */
+.product img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge.ready {
+  background: lime;
+  color: black;
+}
+
+.badge.sold {
+  background: red;
+}
+
+/* TEXT */
+.product h2 {
+  margin: 12px 0 8px;
+}
+
+.product ul {
+  list-style: none;
+  padding: 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 20px;
+  margin: 10px 0;
+  color: cyan;
+}
+
+.sold-text {
+  color: red;
+}
+
+/* BUTTON */
+.btn {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: linear-gradient(45deg, cyan, #00ff99);
+  color: black;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px #00ffd5; }
+  to { box-shadow: 0 0 25px #00ffd5; }
+}
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px cyan;
+}
+
+.disable {
+  background: #333;
+  color: #777;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #777;
+  font-size: 13px;
+}
+
+.trust {
+  font-size: 15px;
+  color: #aaa;
+  margin-top: 10px;
+}
